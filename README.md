@@ -32,3 +32,9 @@
 
 ## Import
 Whenever you make any change to the shared library folder, make sure to increment the `version` number inside `Package.json` file.
+
+## npm run build:
+* It first runs npm run build:cjs, which builds the CommonJS version of the code.
+* Then it runs npm run build:esm, which builds the ES module version of the code.
+* It then runs TypeScript compilation (tsc), outputting the compiled files to the build/src directory.
+* Finally, it runs a custom script build-package.js, which likely handles additional packaging or preparation tasks.
